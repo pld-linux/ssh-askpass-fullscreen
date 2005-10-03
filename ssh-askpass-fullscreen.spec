@@ -15,11 +15,13 @@ License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://ftp.debian.org/debian/pool/main/s/ssh-askpass-fullscreen/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	c46ad80b6bb150270514317001a2cedc
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	pkgconfig
 Requires:	openssh
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
+%define		_libexecdir	%{_libdir}/openssh
 
 %description
 This is an X11-based passphrase dialog for use with SSH.
@@ -63,7 +65,7 @@ X11.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libexecdir}/ssh
 
-install gtk2-ssh-askpass $RPM_BUILD_ROOT%{_libexecdir}/ssh
+install gtk2-ssh-askpass $RPM_BUILD_ROOT%{_libexecdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_libexecdir}/ssh/*
+%attr(755,root,root) %{_libexecdir}/*
