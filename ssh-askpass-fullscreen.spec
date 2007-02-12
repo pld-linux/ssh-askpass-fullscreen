@@ -1,13 +1,13 @@
 Summary:	SSH X11 passphrase dialog
-Summary(de.UTF-8):   SSH X11 Passwort-Dialog
-Summary(es.UTF-8):   Diálogo para introducción de passphrase para X11
-Summary(fr.UTF-8):   Dialogue pass-phrase X11 d'SSH
-Summary(it.UTF-8):   Finestra di dialogo X11 per la frase segreta di SSH
-Summary(pl.UTF-8):   Odpytywacz hasła SSH dla X11
-Summary(pt.UTF-8):   Diálogo de pedido de senha para X11 do SSH
-Summary(pt_BR.UTF-8):   Diálogo para entrada de passphrase para X11
-Summary(ru.UTF-8):   SSH - диалог ввода ключевой фразы (passphrase) для X11
-Summary(uk.UTF-8):   SSH - діалог вводу ключової фрази (passphrase) для X11
+Summary(de.UTF-8):	SSH X11 Passwort-Dialog
+Summary(es.UTF-8):	Diálogo para introducción de passphrase para X11
+Summary(fr.UTF-8):	Dialogue pass-phrase X11 d'SSH
+Summary(it.UTF-8):	Finestra di dialogo X11 per la frase segreta di SSH
+Summary(pl.UTF-8):	Odpytywacz hasła SSH dla X11
+Summary(pt.UTF-8):	Diálogo de pedido de senha para X11 do SSH
+Summary(pt_BR.UTF-8):	Diálogo para entrada de passphrase para X11
+Summary(ru.UTF-8):	SSH - диалог ввода ключевой фразы (passphrase) для X11
+Summary(uk.UTF-8):	SSH - діалог вводу ключової фрази (passphrase) для X11
 Name:		ssh-askpass-fullscreen
 Version:	0.3
 Release:	1
