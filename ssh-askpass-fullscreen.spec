@@ -9,19 +9,17 @@ Summary(pt_BR.UTF-8):	Diálogo para entrada de passphrase para X11
 Summary(ru.UTF-8):	SSH - диалог ввода ключевой фразы (passphrase) для X11
 Summary(uk.UTF-8):	SSH - діалог вводу ключової фрази (passphrase) для X11
 Name:		ssh-askpass-fullscreen
-Version:	0.3
-Release:	2
+Version:	0.4
+Release:	3
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://ftp.debian.org/debian/pool/main/s/ssh-askpass-fullscreen/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	c46ad80b6bb150270514317001a2cedc
+Source0:	http://www.cgabriel.org/download/ssh-askpass-fullscreen/%{name}-%{version}.tar.gz
+# Source0-md5:	989b2c34b4a43ae0117ce69d464a417d
+URL:		https://trac.cgabriel.org/wiki/SshAskpassFullscreen
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	pkgconfig
 Requires:	openssh
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
-%define		_libexecdir	%{_libdir}/openssh
 
 %description
 This is an X11-based passphrase dialog for use with SSH.
@@ -55,17 +53,17 @@ X11.
 %setup -q
 
 %build
-%{__cc} gtk2-ssh-askpass.c \
+%{__cc} ssh-askpass-fullscreen.c \
 	%{rpmcflags} -Wall \
-	-o gtk2-ssh-askpass \
+	-o ssh-askpass-fullscreen \
 	`pkg-config --libs gtk+-2.0` \
 	`pkg-config --cflags gtk+-2.0`
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libexecdir}/ssh
+install -d $RPM_BUILD_ROOT%{_bindir}
 
-install gtk2-ssh-askpass $RPM_BUILD_ROOT%{_libexecdir}
+cp -a ssh-askpass-fullscreen $RPM_BUILD_ROOT%{_bindir}/ssh-askpass-fullscreen
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -73,4 +71,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_libexecdir}/*
+%attr(755,root,root) %{_bindir}/ssh-askpass-fullscreen
