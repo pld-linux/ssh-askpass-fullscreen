@@ -10,7 +10,7 @@ Summary(ru.UTF-8):	SSH - диалог ввода ключевой фразы (pa
 Summary(uk.UTF-8):	SSH - діалог вводу ключової фрази (passphrase) для X11
 Name:		ssh-askpass-fullscreen
 Version:	0.4
-Release:	3
+Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://www.cgabriel.org/download/ssh-askpass-fullscreen/%{name}-%{version}.tar.gz
